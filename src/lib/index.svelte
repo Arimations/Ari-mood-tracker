@@ -14,8 +14,7 @@
     async function getEntries() {
    	 const { data, error } = await supabase.from('moodEntries').select();
    	 if (error) alert(error.message);
-
-   	 return data;
+        return data;
     }
 </script>
 
