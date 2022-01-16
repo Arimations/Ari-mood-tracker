@@ -1,7 +1,6 @@
 <script>
     import supabase from '$lib/db';
-import Login from './login.svelte';
-import Signup from './signup.svelte';
+
 
     async function logout() {
    	 const { error } = await supabase.auth.signOut();
@@ -15,5 +14,3 @@ import Signup from './signup.svelte';
 <section class="container px-4 py-3 text-center">
     <button class="btn btn-secondary" on:click={logout}>Logout</button>
 </section>
-<Signup/>
-<Login/>
